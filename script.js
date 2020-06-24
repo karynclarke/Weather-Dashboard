@@ -84,27 +84,31 @@ function getForecast(lat, lon) {
         url: `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=2641f6c0fcb035c194bce28917537a6f&units=imperial`,
         dataType: "json"
     }).then(function(res) {
-        $("#forecast").card = $("<div>").addClass("card");
-        var cardBody = $("<div>").addClass("card-body");
-        var title = $("<h2>")
-            .addClass("card-title")
-            .text(data.name);
-        var tempEl = $("<p>")
-            .addClass("card-text")
-            .text("Temperature: " + temp);
-        var wind = $("<p>")
-            .addClass("card-text")
-            .text("Wind Speed: " + data.wind.speed + "mph");
-        var humid = $("<p>")
-            .addClass("card-text")
-            .text("Humidity:" + data.main.humidity + "%");
+        // $("#forecast").card = $("<div>").addClass("card");
+        //var cardBody = $("<div>").addClass("card-body");
+        //ar title = $("<h2>")
+        //.addClass("card-title")
+        //.text(res.name);
         for (var i = 1; i < 6; i++) {
             console.log(res.daily[i])
+            var currDay = res.daily[i]
             var col = $("<div>").addClass("col-lg-2");
-            var date = moment.unix(res.daily[i].dt).format('MMMM Do YYYY');
+            var date = moment.unix(currDay.dt).format('MMMM Do');
             var card = $("<div>").addClass("card");
             var cardBody = $("<div>").addClass("card-body");
             var title = $("<h2>").addClass("card-title").text(date);
+            var cardBody = $("<div>").addClass("card-body");
+
+            var tempEl = $("<p>")
+                .addClass("card-text")
+                .text("Temperature: " + currDay.temp.day);
+            var wind = $("<p>")
+                .addClass("card-text")
+                .text("Wind Speed: " + currDay.wind_speed + "mph");
+            var humid = $("<p>")
+                .addClass("card-text")
+                .text("Humidity:" + currDay.humidity + "%");
+
 
             $("#forecast").append(col.append(card.append(cardBody.append(title))));
 
@@ -169,16 +173,3 @@ function getForecast(lat, lon) {
 //             success: function(data) {
 //                 var uv = $("<p>").text("UV Index:  ");
 //                 var btn = $("<span>").addClass("btn bt-sm").text(data.value);
-
-//                 //color depends on uv value
-//                 if (data.value < 3) {
-//                     btn.addClass("btn-success");
-//                 } else if (data.value < 7) {
-//                     btn.addClass("btn-warning");
-//                 } else {
-//                     btn.addClass("btn-danger");
-//                 }
-
-//                 $("#today .card-body").append(uv.append(btn));
-//             },
-//         });
