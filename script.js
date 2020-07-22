@@ -60,14 +60,13 @@ $(document).ready(function() {
             var humid = $("<p>")
                 .addClass("card-text")
                 .text("Humidity:" + data.main.humidity + "%");
-            // var img = $("<img>").attr(
-            //     "src",
-            //     "https://api.openweathermap.org/img/w" + data.weather[0].icon + "png"
-            // );
+            var img = $("<img>").attr("src",
+                "https://api.openweathermap.org/img/w" + data.weather[0].icon + ".png"
+            );
 
             $("#today").append(card);
             card.append(cardBody);
-            cardBody.append(title, tempEl, humid, wind)
+            cardBody.append(img, title, tempEl, humid, wind)
 
             var lat = data.coord.lat;
             var lon = data.coord.lon;
@@ -84,11 +83,7 @@ function getForecast(lat, lon) {
         url: `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=2641f6c0fcb035c194bce28917537a6f&units=imperial`,
         dataType: "json"
     }).then(function(res) {
-        // $("#forecast").card = $("<div>").addClass("card");
-        //var cardBody = $("<div>").addClass("card-body");
-        //ar title = $("<h2>")
-        //.addClass("card-title")
-        //.text(res.name);
+
         for (var i = 1; i < 6; i++) {
             console.log(res.daily[i])
             var currDay = res.daily[i]
@@ -110,22 +105,12 @@ function getForecast(lat, lon) {
                 .text("Humidity:" + currDay.humidity + "%");
 
 
-            $("#forecast").append(col.append(card.append(cardBody.append(title))));
+            $("#forecast").append(col.append(card.append(cardBody.append(title, tempEl, wind, humid))));
 
         }
     })
 }
 
-//end of code
-
-//             .then(function(resp) {
-//                 return resp.json();
-//             }) // Convert data to json
-//             .then(function(data) {
-//                 console.log(data);
-//                 $("#forecast")
-//                     .html('h4 class="mt-3">5 Day Forecast:</h4>')
-//                     .append('div class = "row">');
 
 //                 //loop over all forecasts
 //                 for (var i = 0; 1 < data.list.length; i++) {
