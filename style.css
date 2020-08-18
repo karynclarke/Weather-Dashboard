@@ -1,9 +1,13 @@
-.header {
-    padding: 60px;
+h1 {
+    padding: 30px;
     text-align: center;
     background: #1abc7e;
     color: white;
     font-size: 30px;
+}
+
+.container-fluid {
+    background-color: lightgray
 }
 
 .wrapper {
@@ -38,9 +42,9 @@ a:focus {
     transition: all 0.3s;
 }
 
-.aside sidebar-header {
+.aside {
     padding: 20px;
-    background: #6d7fcc;
+    background: lightgray;
 }
 
 .aside ul.components {
@@ -65,14 +69,8 @@ a:focus {
 }
 
 
-/*
-#sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #fff;
-    background: #6d7fcc;
-    */
-
-ul ul a {
+/* ul {
     font-size: 0.9em !important;
     padding-left: 30px !important;
     background: #6d7fcc;
-}
+} */
