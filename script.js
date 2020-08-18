@@ -58,18 +58,12 @@ $(document).ready(function() {
                 .text(data.name);
             var tempEl = $("<p>")
                 .addClass("card-text")
-                .text("Temperature: " + temp + "| Wind Speed:" + parseInt(data.wind.speed) + "mph" +
-                    "| Humidity:" + data.main.humidity + "%");
+                .text("Temperature: " + temp + " | Wind Speed:" + parseInt(data.wind.speed) + "mph" +
+                    " | Humidity:" + data.main.humidity + "%");
             let TempEl = Math.round(temp);
             var wind = $("<p>")
-                .addClass("card-text"); //.text(`Wind Speed: ${parseInt(data.wind.speed)} mph`);
-            var humid = $("<p>").addClass("card-text"); //   .text("Humidity:" + data.main.humidity + "%");
-
-            // var tempEl = $("<p>")
-            //     .addClass("card-text")
-            //     .text("Temperature: " + temp + "|Wind Speed:"); // + parseInt(data.wind.speed) + "mph" + "Humidity:" + data.main.humidity + "%");
-
-
+                .addClass("card-text");
+            var humid = $("<p>").addClass("card-text");
 
 
             var img = $("<img>").attr(
