@@ -12,8 +12,7 @@ $(document).ready(function() {
         event.preventDefault();
 
         var searchTerm = $("#search-value").val();
-        //console.log(searchTerm);
-
+        
         searchWeather(searchTerm);
         makeRow(searchTerm);
 
@@ -87,8 +86,7 @@ $(document).ready(function() {
             var lon = data.coord.lon;
 
             getForecast(lat, lon);
-            // getUVIndex(lat, lon)
-        });
+                    });
     }
 });
 
@@ -107,7 +105,7 @@ function getForecast(lat, lon) {
             var date = moment.unix(currDay.dt).format("MMMM Do");
             var card = $("<div>").addClass("card");
             var cardBody = $("<div>").addClass("card-body");
-            var title = $("<h2>").addClass("card-title").text(date);
+            var title = $("<h3>").addClass("card-title").text(date);
             var cardBody = $("<div>").addClass("card-body");
 
             var tempEl = $("<p>")

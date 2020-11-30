@@ -1,78 +1,81 @@
-        h1 {
-            padding: 20px;
-            text-align: center;
-            background: rgb(85, 33, 85);
-            color: white;
-            font-size: 36px;
-            font-style: italic;
-        }
-        
-        .container-fluid {
-            background-color: lightgray
-        }
-        /* .wrapper {
-    display: flex;
-    width: 100%;
-    align-items: stretch;
-} */
-        
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 1.1em;
-            font-weight: 500;
-            line-height: 1.7em;
-            color: rgb(85, 33, 20);
-        }
-        
-        p {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 1.1em;
-            font-weight: 500;
-            line-height: 1.7em;
-            color: rgb(50, 25, 50);
-        }
-        
-        a,
-        a:hover,
-        a:focus {
-            color: inherit;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-        
-        .aside {
-            padding: 20px;
-            background: lightgray;
-            border-width: 2px;
-        }
-        
-        .aside ul p {
-            color: #fff;
-            padding: 10px;
-        }
-        
-        .aside ul li a {
-            padding: 10px;
-            font-size: 1.1em;
-            display: block;
-        }
-        
-        ul {
-            font-size: 1em !important;
-            margin-left: 30px !important;
-            background: lightslategrey;
-        }
-        
-        .card {
-            background-color: rgb(200, 190, 170);
-        }
-        
-        .btn {
-            color: white;
-            background-color: rgb(85, 33, 20);
-            margin: 2px;
-        }
-        
-        .btn-primary:hover {
-            background: rgb(85, 33, 85)
-        }
+h1 {
+	padding: 20px;
+	text-align: center;
+	background: rgb(85, 33, 85);
+	color: white;
+	font-size: 36px;
+	font-style: italic;
+}
+
+.container-fluid {
+	background-color: lightgray;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+	font-weight: 500;
+	line-height: 1.7em;
+	color: rgb(85, 33, 20);
+}
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+	font-weight: 500;
+	line-height: 1.7em;
+	color: rgb(50, 25, 50);
+}
+
+a,
+a:hover,
+a:focus {
+	color: inherit;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+.aside {
+	padding: 20px;
+	background: lightgray;
+	border-width: 2px;
+}
+
+.aside ul p {
+	color: #fff;
+	padding: 10px;
+}
+
+.aside ul li a {
+	padding: 10px;
+	font-size: 1.1em;
+	display: block;
+}
+
+ul {
+	font-size: 1em !important;
+	margin-left: 30px !important;
+	background: lightslategrey;
+}
+
+.card {
+	background-color: rgb(200, 190, 170);
+}
+
+.btn {
+	color: white;
+	background-color: rgb(85, 33, 20);
+	margin: 2px;
+}
+
+.btn-primary:hover {
+	background: rgb(85, 33, 85);
+}
+
+h2 {
+ font-size: 30px;
+}
+
+h3 {
+ font-size: 20px;
+}
